@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4648061DEC4A19AB0BE6D6FB /* Pods_RealmGoodApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 935B3A170D8373D380FC3724 /* Pods_RealmGoodApp.framework */; };
 		5455E48226B9313F007FA9D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5455E48126B9313F007FA9D1 /* AppDelegate.swift */; };
 		5455E48426B9313F007FA9D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5455E48326B9313F007FA9D1 /* SceneDelegate.swift */; };
 		5455E48626B9313F007FA9D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5455E48526B9313F007FA9D1 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33C4321D66E4BCDEFDD8281D /* Pods-RealmGoodApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmGoodApp.release.xcconfig"; path = "Target Support Files/Pods-RealmGoodApp/Pods-RealmGoodApp.release.xcconfig"; sourceTree = "<group>"; };
 		5455E47E26B9313F007FA9D1 /* RealmGoodApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmGoodApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5455E48126B9313F007FA9D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5455E48326B9313F007FA9D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		5455E48A26B93144007FA9D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5455E48D26B93144007FA9D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5455E48F26B93144007FA9D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		629E3DABC712F9148B1B713E /* Pods-RealmGoodApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmGoodApp.debug.xcconfig"; path = "Target Support Files/Pods-RealmGoodApp/Pods-RealmGoodApp.debug.xcconfig"; sourceTree = "<group>"; };
+		935B3A170D8373D380FC3724 /* Pods_RealmGoodApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RealmGoodApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4648061DEC4A19AB0BE6D6FB /* Pods_RealmGoodApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15CE397AEE3FBBAB84BB83A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				935B3A170D8373D380FC3724 /* Pods_RealmGoodApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5455E47526B9313F007FA9D1 = {
 			isa = PBXGroup;
 			children = (
 				5455E48026B9313F007FA9D1 /* RealmGoodApp */,
 				5455E47F26B9313F007FA9D1 /* Products */,
+				977202D38B73682BFA1BCA47 /* Pods */,
+				15CE397AEE3FBBAB84BB83A1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +73,46 @@
 			children = (
 				5455E48126B9313F007FA9D1 /* AppDelegate.swift */,
 				5455E48326B9313F007FA9D1 /* SceneDelegate.swift */,
-				5455E48526B9313F007FA9D1 /* ViewController.swift */,
-				5455E48726B9313F007FA9D1 /* Main.storyboard */,
-				5455E48A26B93144007FA9D1 /* Assets.xcassets */,
+				5455E49726B93299007FA9D1 /* Model */,
+				5455E49626B93290007FA9D1 /* View */,
+				5455E49526B93279007FA9D1 /*  Controller */,
 				5455E48C26B93144007FA9D1 /* LaunchScreen.storyboard */,
 				5455E48F26B93144007FA9D1 /* Info.plist */,
 			);
 			path = RealmGoodApp;
+			sourceTree = "<group>";
+		};
+		5455E49526B93279007FA9D1 /*  Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5455E48526B9313F007FA9D1 /* ViewController.swift */,
+			);
+			path = " Controller";
+			sourceTree = "<group>";
+		};
+		5455E49626B93290007FA9D1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5455E48726B9313F007FA9D1 /* Main.storyboard */,
+				5455E48A26B93144007FA9D1 /* Assets.xcassets */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5455E49726B93299007FA9D1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		977202D38B73682BFA1BCA47 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				629E3DABC712F9148B1B713E /* Pods-RealmGoodApp.debug.xcconfig */,
+				33C4321D66E4BCDEFDD8281D /* Pods-RealmGoodApp.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +122,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5455E49226B93144007FA9D1 /* Build configuration list for PBXNativeTarget "RealmGoodApp" */;
 			buildPhases = (
+				2DE074960C8A315F653B747E /* [CP] Check Pods Manifest.lock */,
 				5455E47A26B9313F007FA9D1 /* Sources */,
 				5455E47B26B9313F007FA9D1 /* Frameworks */,
 				5455E47C26B9313F007FA9D1 /* Resources */,
+				877CFBB2DA38893593F30E1F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +181,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2DE074960C8A315F653B747E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RealmGoodApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		877CFBB2DA38893593F30E1F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RealmGoodApp/Pods-RealmGoodApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RealmGoodApp/Pods-RealmGoodApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RealmGoodApp/Pods-RealmGoodApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5455E47A26B9313F007FA9D1 /* Sources */ = {
@@ -283,6 +375,7 @@
 		};
 		5455E49326B93144007FA9D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 629E3DABC712F9148B1B713E /* Pods-RealmGoodApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -295,12 +388,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.RealmGood.RealmGoodApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		5455E49426B93144007FA9D1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33C4321D66E4BCDEFDD8281D /* Pods-RealmGoodApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -313,7 +407,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.RealmGood.RealmGoodApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
