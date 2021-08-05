@@ -10,14 +10,15 @@ import UIKit
 class ViewController: UIViewController{
 
     @IBOutlet weak var tableView: UITableView!
-    let realmDatasModel = RealmDatasModel()
+    let realmCRUDModel = RealmCRUDModel()
     
     let cellContentsArray = ["1","2","3","4","5","6","7","8","9","10"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        tableView.delegate = self
+        tableView.dataSource = self
         
     }
 
@@ -26,14 +27,53 @@ class ViewController: UIViewController{
 }
 
 extension ViewController:UITableViewDelegate,UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return 77
+        
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        
+        return 1
+        
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        
+        return cellContentsArray.count
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        
+        let cellContentsLabel = cell.contentView.viewWithTag(1) as! UILabel
+        let cellHeartImage = cell.contentView.viewWithTag(2) as! UIImageView
+        
+        cellContentsLabel.text = cellContentsArray[indexPath.row]
+        cellHeartImage.addGestureRecognizer(UIGestureRecognizer(target: self, action: #selector(goodOrNoGood)))
+        
+        return cell
     }
-    
+     
+    //未完成
+    @objc func goodOrNoGood(sender:UIImageView){
+        
+        if sender.image == UIImage(systemName: "heart"){
+            
+            //realmCRUDModel.createGoodRealm(goodLabel: cellContentsArray[sender.tag])
+            sender.image = UIImage(systemName: "heart.fill")
+            
+        }else{
+            
+            //realmCRUDModel.upDateRealm(selectCell: )
+            sender.image = UIImage(systemName: "heart")
+        }
+        
+    }
     
     
     
