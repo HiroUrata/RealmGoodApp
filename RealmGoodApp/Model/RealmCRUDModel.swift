@@ -71,14 +71,14 @@ extension RealmCRUDModel{
 
 extension RealmCRUDModel{
     
-    func upDateRealm(selectCell:Int){
+    func deleteRealm(selectContents:String){
         
         do{
            let realm = try Realm()
            
             try realm.write({
                 
-                realm.objects(RealmDatasModel.self)[selectCell].realmGoodJudge = "noGood"
+                realm.delete(realm.objects(RealmDatasModel.self).filter("realmGoodLabel == '\(selectContents)'"))
                 
             })
             

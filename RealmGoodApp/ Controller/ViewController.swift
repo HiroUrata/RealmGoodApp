@@ -60,18 +60,19 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource {
         return cell
     }
      
-    //未完成
+
     @objc func goodOrNoGood(sender:UIButton){
         
         if sender.backgroundImage(for: .normal) == UIImage(systemName: "heart"){
             
-            //realmCRUDModel.createGoodRealm(goodLabel: cellContentsArray[sender.tag])
+            realmCRUDModel.createGoodRealm(goodLabel: cellContentsArray[sender.tag])
+            
             sender.setBackgroundImage(UIImage(systemName: "heart.fill"), for: .normal)
             print(sender.tag)
             
         }else{
             
-            //realmCRUDModel.upDateRealm(selectCell: )
+            realmCRUDModel.deleteRealm(selectContents: cellContentsArray[sender.tag])
             sender.setBackgroundImage(UIImage(systemName: "heart"), for: .normal)
             print(sender.tag)
         }
