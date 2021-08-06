@@ -22,6 +22,13 @@ class ViewController: UIViewController{
         
     }
 
+    @IBAction func goList(_ sender: Any) {
+        
+        let GoodListVC = storyboard?.instantiateViewController(identifier: "GoodListVC") as! GoodListViewController
+        
+        navigationController?.pushViewController(GoodListVC, animated: true)
+        
+    }
     
 
 }
