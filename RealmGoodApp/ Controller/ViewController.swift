@@ -51,26 +51,29 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
         let cellContentsLabel = cell.contentView.viewWithTag(1) as! UILabel
-        let cellHeartImage = cell.contentView.viewWithTag(2) as! UIImageView
+        let cellHeartButton = cell.contentView.viewWithTag(2) as! UIButton
         
         cellContentsLabel.text = cellContentsArray[indexPath.row]
-        cellHeartImage.addGestureRecognizer(UIGestureRecognizer(target: self, action: #selector(goodOrNoGood)))
+        cellHeartButton.tag = indexPath.row
+        cellHeartButton.addTarget(self, action: #selector(goodOrNoGood), for: .touchDown)
         
         return cell
     }
      
     //未完成
-    @objc func goodOrNoGood(sender:UIImageView){
+    @objc func goodOrNoGood(sender:UIButton){
         
-        if sender.image == UIImage(systemName: "heart"){
+        if sender.backgroundImage(for: .normal) == UIImage(systemName: "heart"){
             
             //realmCRUDModel.createGoodRealm(goodLabel: cellContentsArray[sender.tag])
-            sender.image = UIImage(systemName: "heart.fill")
+            sender.setBackgroundImage(UIImage(systemName: "heart.fill"), for: .normal)
+            print(sender.tag)
             
         }else{
             
             //realmCRUDModel.upDateRealm(selectCell: )
-            sender.image = UIImage(systemName: "heart")
+            sender.setBackgroundImage(UIImage(systemName: "heart"), for: .normal)
+            print(sender.tag)
         }
         
     }
