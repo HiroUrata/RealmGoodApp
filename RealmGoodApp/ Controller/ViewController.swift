@@ -21,6 +21,7 @@ class ViewController: UIViewController{
         super.viewDidLoad()
         
         navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
         
         title = "cellContentsArray"
         tableView.delegate = self
