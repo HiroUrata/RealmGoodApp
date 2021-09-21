@@ -22,6 +22,7 @@ class ViewController: UIViewController{
         
         navigationItem.searchController = searchController
         
+        title = "UISearchControllerLesson"
         tableView.delegate = self
         tableView.dataSource = self
         searchController.searchBar.delegate = self
@@ -41,11 +42,18 @@ extension ViewController:UISearchBarDelegate{
                 
                 searchResultArray.append(cellContent)
                 tableView.reloadData()
+                
             }else if searchText == ""{
                 
                 tableView.reloadData()
             }
         }
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+     
+        searchResultArray = []
+        tableView.reloadData()
     }
     
 }
