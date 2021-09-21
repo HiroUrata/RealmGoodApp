@@ -22,7 +22,7 @@ class ViewController: UIViewController{
         
         navigationItem.searchController = searchController
         
-        title = "UISearchControllerLesson"
+        title = "cellContentsArray"
         tableView.delegate = self
         tableView.dataSource = self
         searchController.searchBar.delegate = self
@@ -41,6 +41,7 @@ extension ViewController:UISearchBarDelegate{
             if cellContent.contains(searchText) == true {
                 
                 searchResultArray.append(cellContent)
+                title = "”\(searchText)”で検索中"
                 tableView.reloadData()
                 
             }else if searchText == ""{
@@ -53,6 +54,7 @@ extension ViewController:UISearchBarDelegate{
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
      
         searchResultArray = []
+        title = "cellContentsArray"
         tableView.reloadData()
     }
     
