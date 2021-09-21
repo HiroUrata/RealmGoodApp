@@ -14,9 +14,6 @@
 		5455E48926B9313F007FA9D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5455E48726B9313F007FA9D1 /* Main.storyboard */; };
 		5455E48B26B93144007FA9D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5455E48A26B93144007FA9D1 /* Assets.xcassets */; };
 		5455E48E26B93144007FA9D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5455E48C26B93144007FA9D1 /* LaunchScreen.storyboard */; };
-		5455E49B26BBCA27007FA9D1 /* RealmDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5455E49A26BBCA27007FA9D1 /* RealmDatas.swift */; };
-		5455E49D26BBCA3C007FA9D1 /* RealmCRUDModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5455E49C26BBCA3C007FA9D1 /* RealmCRUDModel.swift */; };
-		5455E49F26BD41FA007FA9D1 /* GoodListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5455E49E26BD41FA007FA9D1 /* GoodListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,9 +26,6 @@
 		5455E48A26B93144007FA9D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5455E48D26B93144007FA9D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5455E48F26B93144007FA9D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5455E49A26BBCA27007FA9D1 /* RealmDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDatas.swift; sourceTree = "<group>"; };
-		5455E49C26BBCA3C007FA9D1 /* RealmCRUDModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmCRUDModel.swift; sourceTree = "<group>"; };
-		5455E49E26BD41FA007FA9D1 /* GoodListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodListViewController.swift; sourceTree = "<group>"; };
 		629E3DABC712F9148B1B713E /* Pods-RealmGoodApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmGoodApp.debug.xcconfig"; path = "Target Support Files/Pods-RealmGoodApp/Pods-RealmGoodApp.debug.xcconfig"; sourceTree = "<group>"; };
 		935B3A170D8373D380FC3724 /* Pods_RealmGoodApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RealmGoodApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -79,7 +73,6 @@
 			children = (
 				5455E48126B9313F007FA9D1 /* AppDelegate.swift */,
 				5455E48326B9313F007FA9D1 /* SceneDelegate.swift */,
-				5455E49726B93299007FA9D1 /* Model */,
 				5455E49626B93290007FA9D1 /* View */,
 				5455E49526B93279007FA9D1 /*  Controller */,
 				5455E48C26B93144007FA9D1 /* LaunchScreen.storyboard */,
@@ -92,7 +85,6 @@
 			isa = PBXGroup;
 			children = (
 				5455E48526B9313F007FA9D1 /* ViewController.swift */,
-				5455E49E26BD41FA007FA9D1 /* GoodListViewController.swift */,
 			);
 			path = " Controller";
 			sourceTree = "<group>";
@@ -104,15 +96,6 @@
 				5455E48A26B93144007FA9D1 /* Assets.xcassets */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		5455E49726B93299007FA9D1 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				5455E49A26BBCA27007FA9D1 /* RealmDatas.swift */,
-				5455E49C26BBCA3C007FA9D1 /* RealmCRUDModel.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		977202D38B73682BFA1BCA47 /* Pods */ = {
@@ -239,11 +222,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5455E48626B9313F007FA9D1 /* ViewController.swift in Sources */,
-				5455E49B26BBCA27007FA9D1 /* RealmDatas.swift in Sources */,
 				5455E48226B9313F007FA9D1 /* AppDelegate.swift in Sources */,
-				5455E49F26BD41FA007FA9D1 /* GoodListViewController.swift in Sources */,
 				5455E48426B9313F007FA9D1 /* SceneDelegate.swift in Sources */,
-				5455E49D26BBCA3C007FA9D1 /* RealmCRUDModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
