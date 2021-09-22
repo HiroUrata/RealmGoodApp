@@ -27,12 +27,25 @@ class ViewController: UIViewController{
         tableView.delegate = self
         tableView.dataSource = self
         searchController.searchBar.delegate = self
+        searchController.searchBar.scopeButtonTitles = ["ボタン1","ボタン2","ボタン3"]
+        searchController.searchBar.showsBookmarkButton = true
     }
     
    
 }
 
 extension ViewController:UISearchBarDelegate{
+    
+    func searchBarBookmarkButtonClicked(_ searchBar: UISearchBar) {
+        
+        //ブックマークが押された時の処理
+        
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+        
+        
+    }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
