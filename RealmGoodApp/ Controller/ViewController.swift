@@ -26,9 +26,11 @@ class ViewController: UIViewController{
         title = "cellContentsArray"
         tableView.delegate = self
         tableView.dataSource = self
+        
         searchController.searchBar.delegate = self
-        searchController.searchBar.scopeButtonTitles = ["ボタン1","ボタン2","ボタン3"]
+        searchController.searchBar.scopeButtonTitles = ["Vで検索","Fで検索","Cで検索"]
         searchController.searchBar.showsBookmarkButton = true
+        
     }
     
    
@@ -36,14 +38,57 @@ class ViewController: UIViewController{
 
 extension ViewController:UISearchBarDelegate{
     
-    func searchBarBookmarkButtonClicked(_ searchBar: UISearchBar) {
-        
-        //ブックマークが押された時の処理
-        
-    }
+//    func searchBarBookmarkButtonClicked(_ searchBar: UISearchBar) {
+//        //ブックマークが押された時の処理
+//
+//
+//    }
     
     func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
         
+        switch selectedScope {
+        
+        case 0:
+            searchResultArray = []
+            cellContentsArray.forEach { cellContent in
+                
+                if cellContent.contains(searchBar.scopeButtonTitles![selectedScope].prefix(1)){
+                    
+                    searchResultArray.append(cellContent)
+                    title = "”\(searchBar.scopeButtonTitles![selectedScope].prefix(1))”で検索中"
+                    tableView.reloadData()
+                }
+            }
+                
+        case 1:
+            searchResultArray = []
+            cellContentsArray.forEach { cellContent in
+                
+                if cellContent.contains(searchBar.scopeButtonTitles![selectedScope].prefix(1)){
+                    
+                    searchResultArray.append(cellContent)
+                    title = "”\(searchBar.scopeButtonTitles![selectedScope].prefix(1))”で検索中"
+                    tableView.reloadData()
+                }
+            }
+            
+        case 2:
+            searchResultArray = []
+            cellContentsArray.forEach { cellContent in
+                
+                if cellContent.contains(searchBar.scopeButtonTitles![selectedScope].prefix(1)){
+                    
+                    searchResultArray.append(cellContent)
+                    title = "”\(searchBar.scopeButtonTitles![selectedScope].prefix(1))”で検索中"
+                    tableView.reloadData()
+                }
+            }
+            
+        default:
+            searchResultArray = []
+            title = "cellContentsArray"
+            tableView.reloadData()
+        }
         
     }
     
